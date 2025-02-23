@@ -7,7 +7,7 @@ import toml
 secrets = toml.load('.streamlit/secrets.toml')
 
 # Set API Key for Google Gemini
-google_api_key = st.secrets["general"]["google_api_key"]
+google_api_key = st.secrets["google_api_key"]
 
 # Configure the Google Gemini API
 genai.configure(api_key=google_api_key)
