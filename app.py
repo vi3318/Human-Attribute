@@ -1,10 +1,10 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-from dotenv import load_dotenv
 import PIL.Image
+import toml
 
-load_dotenv()
+secrets = toml.load('.streamlit/secrets.toml')
 
 # Set API Key for Google Gemini
 google_api_key = st.secrets["general"]["google_api_key"]
@@ -43,6 +43,7 @@ def analyze_human_attributes(image):
 
 # Streamlit App
 st.set_page_config(page_title="Human Attribute Detection", page_icon=":guardsman:", layout="wide")
+
 
 
 st.markdown("<h1 style='text-align: left;'>Human Attribute Detection with Gemini</h1>", unsafe_allow_html=True)
