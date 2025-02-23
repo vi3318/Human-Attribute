@@ -7,7 +7,7 @@ import PIL.Image
 load_dotenv()
 
 # Set API Key for Google Gemini
-google_api_key = st.secrets["general"]["GOOGLE_API_KEY"]
+google_api_key = st.secrets["general"]["google_api_key"]
 
 # Configure the Google Gemini API
 genai.configure(api_key=google_api_key)
